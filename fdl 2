@@ -32,13 +32,16 @@ YTest distribution = {0: 980, 1: 1135, 2: 1032, 3: 1010, 4: 982, 5: 892, 6: 958,
 ln[11]: XTrain = XTrain.astype('float32') / 255
 XTest  = XTest. astype( 'I-1oat32' )  /  255
 It data reshapp!ng.
-XTrain = XTrain.reshape((len(XTrain), np. prod (XTrain.shape[1:]))) XTest	XTest.reshape((len(XTest), np.prod(XTest.shape[1:])))
-print (XTrain.shape) print (XTest.shape)
-(60000, 784)
-(10000, 784)
+XTrain = XTrain.reshape((len(XTrain), np. prod (XTrain.shape[1:]))) 
+XTest=XTest.reshape((len(XTest), np.prod(XTest.shape[1:])))
+print (XTrain.shape) 
+print (XTest.shape)
+
 
 ln[15]:InputModel = Input (shape=(784,))
-EncodedLayer	Dense(32, activation='relu')(InputModel) DecodedLayer = Dense(784, activation='sigmoid') (EncodedLayer) AutoencoderModel = Model (InputModel, DecodedLayer)
+EncodedLayer =Dense(32, activation='relu')(InputModel) 
+DecodedLayer = Dense(784, activation='sigmoid') (EncodedLayer) 
+AutoencoderModel = Model (InputModel, DecodedLayer)
 # we can sufflrnarize our nodeL.
 AutoencoderMode1.summary()
 
